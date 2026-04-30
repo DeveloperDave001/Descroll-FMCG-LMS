@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions — Student Dashboard | Descroll</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .sidebar-link {
+            transition: all 0.2s ease;
+        }
+        .sidebar-link:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+        .sidebar-link.active {
+            background: rgb(239, 246, 255);
+            color: rgb(37, 99, 235);
+            font-weight: 500;
+        }
+        .discussion-card {
+            transition: all 0.3s ease;
+        }
+        .discussion-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Top Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">D</span>
+                    </div>
+                    <span class="text-lg font-bold text-slate-900">Descroll</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-sm text-slate-600">Discussions</span>
+                </div>
+
+                <!-- Right - Actions -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-slate-400 hover:text-slate-600 transition-colors relative">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+                    <button class="p-2 text-slate-400 hover:text-slate-600 transition-colors">
+                        <i data-lucide="settings" class="w-5 h-5"></i>
+                    </button>
+                    <div class="flex items-center gap-3 pl-4 border-l border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full object-cover">
+                        <div class="hidden md:block">
+                            <p class="text-sm font-medium text-slate-900">James Wilson</p>
+                            <p class="text-xs text-slate-500">VP Operations, Unilever</p>
+                        </div>
+                        <button class="text-slate-400 hover:text-slate-600 transition-colors">
+                            <i data-lucide="log-out" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="pt-16 flex">
+        <!-- Left Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 h-screen overflow-y-auto hidden lg:block">
+            <div class="p-6">
+                <nav class="space-y-2">
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Menu</p>
+                    
+                    <a href="dashboard-student.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                        Dashboard
+                    </a>
+                    <a href="student-dashboard-mycourses.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                        My Courses
+                    </a>
+                    <a href="student-dashboard-certificates.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                        <i data-lucide="trophy" class="w-5 h-5"></i>
+                        Certificates
+                    </a>
+                    <a href="student-dashboard-schedule.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                        Schedule
+                    </a>
+                    <a href="student-dashboard-discussions.html" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-xl text-sm">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                        Discussions
+                    </a>
+                    <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                        Progress
+                    </a>
+                </nav>
+
+                <div class="mt-8 pt-6 border-t border-slate-200">
+                    <nav class="space-y-2">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Account</p>
+                        <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                            Profile
+                        </a>
+                        <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                            <i data-lucide="credit-card" class="w-5 h-5"></i>
+                            Billing
+                        </a>
+                        <a href="login.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 text-sm">
+                            <i data-lucide="log-out" class="w-5 h-5"></i>
+                            Sign Out
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto bg-slate-50 p-6 lg:p-8">
+            <div class="max-w-6xl mx-auto">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-slate-900 mb-2">Discussions</h1>
+                    <p class="text-slate-600">Participate in course discussions and connect with your cohort.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <button class="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium">
+                        All Discussions (12)
+                    </button>
+                    <button class="px-4 py-2 bg-white text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">
+                        My Posts (3)
+                    </button>
+                    <button class="px-4 py-2 bg-white text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">
+                        Unanswered (2)
+                    </button>
+                </div>
+
+                <!-- Discussions List -->
+                <div class="space-y-4">
+                    <!-- Discussion 1 -->
+                    <div class="discussion-card bg-white rounded-2xl p-6 shadow-sm">
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="font-medium text-slate-900 text-sm">Sarah Chen</span>
+                                    <span class="text-xs text-slate-400">2 hours ago</span>
+                                    <span class="px-2 py-1 bg-blue-100 text-blue-600 text-xs font-medium rounded-full">Strategic Leadership</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 mb-2">Question on BCG Matrix: Seasonal Products</h3>
+                                <p class="text-sm text-slate-600 mb-4">How do we account for seasonal products that appear as "dogs" but drive traffic during peak periods?</p>
+                                <div class="flex items-center gap-6 text-xs text-slate-500">
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                                        <span>3 replies</span>
+                                    </button>
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="heart" class="w-4 h-4"></i>
+                                        <span>5 likes</span>
+                                    </button>
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discussion 2 -->
+                    <div class="discussion-card bg-white rounded-2xl p-6 shadow-sm">
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="font-medium text-slate-900 text-sm">Marcus Thompson</span>
+                                    <span class="text-xs text-slate-400">5 hours ago</span>
+                                    <span class="px-2 py-1 bg-emerald-100 text-emerald-600 text-xs font-medium rounded-full">Digital Transformation</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 mb-2">Case Study: NPD Success Story</h3>
+                                <p class="text-sm text-slate-600 mb-4">Shared our NPD success case where we improved success rate by 40%. Can we discuss in next session?</p>
+                                <div class="flex items-center gap-6 text-xs text-slate-500">
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                                        <span>5 replies</span>
+                                    </button>
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="heart" class="w-4 h-4"></i>
+                                        <span>8 likes</span>
+                                    </button>
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discussion 3 -->
+                    <div class="discussion-card bg-white rounded-2xl p-6 shadow-sm">
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="font-medium text-slate-900 text-sm">James Wilson</span>
+                                    <span class="text-xs text-slate-400">1 day ago</span>
+                                    <span class="px-2 py-1 bg-blue-100 text-blue-600 text-xs font-medium rounded-full">Strategic Leadership</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 mb-2">Portfolio Rationalization - Lessons Learned</h3>
+                                <p class="text-sm text-slate-600 mb-4">Applied the framework to our snack division. Identified 12 SKUs for elimination. Projected margin improvement of 3.2%.</p>
+                                <div class="flex items-center gap-6 text-xs text-slate-500">
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                                        <span>2 replies</span>
+                                    </button>
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="heart" class="w-4 h-4"></i>
+                                        <span>12 likes</span>
+                                    </button>
+                                    <button class="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Discussion Button -->
+                <div class="mt-8 text-center">
+                    <button class="btn-primary bg-slate-900 text-white px-8 py-3 rounded-full font-semibold hover:bg-slate-800 transition-colors inline-flex items-center gap-2">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                        Start New Discussion
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

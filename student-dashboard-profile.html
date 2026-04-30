@@ -315,5 +315,18 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        // Handle toggle switches - update background color
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const toggleBg = this.nextElementSibling;
+                if (this.checked) {
+                    toggleBg.style.backgroundColor = '#3b82f6'; // blue-500
+                } else {
+                    toggleBg.style.backgroundColor = '#e2e8f0'; // slate-200
+                }
+            });
+        });
+    </script>
 </body>
 </html>

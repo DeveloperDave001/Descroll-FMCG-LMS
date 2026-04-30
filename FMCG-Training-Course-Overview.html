@@ -85,16 +85,18 @@
     <!-- Section 1: Full 100vh Video (Autoplay with Sound) -->
     <section class="video-section">
         <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=dQw4w9WgXcQ"
-                title="FMCG Executive Training Overview"
-                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
-                id="hero-video">
-            </iframe>
+            <video 
+                id="hero-video"
+                autoplay 
+                muted="false"
+                loop
+                playsinline
+                controls="false"
+                style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="overview sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-        
-
     </section>
 
     <!-- Section 2: Call to Action -->

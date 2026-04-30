@@ -88,10 +88,8 @@
             <video 
                 id="hero-video"
                 autoplay 
-                muted="false"
                 loop
                 playsinline
-                controls="false"
                 style="width: 100%; height: 100%; object-fit: cover;">
                 <source src="Overview Sample.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -157,11 +155,27 @@
     <script>
         lucide.createIcons();
         
-        // Ensure video plays with sound on load
+        // Play video with sound on user interaction
+        document.addEventListener('click', function() {
+            const video = document.getElementById('hero-video');
+            if (video && video.paused) {
+                video.muted = false;
+                video.play().catch(function(e) {
+                    console.log("Autoplay prevented:", e);
+                    // Show play button if autoplay fails
+                    video.controls = true;
+                });
+            }
+        });
+        
+        // Try to play on load (may be blocked by browser)
         window.addEventListener('load', function() {
             const video = document.getElementById('hero-video');
             if (video) {
-                video.src += "&autoplay=1&mute=0";
+                video.muted = false;
+                video.play().catch(function(e) {
+                    console.log("Autoplay requires interaction");
+                });
             }
         });
     </script>

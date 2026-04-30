@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom — Strategic Leadership in FMCG | Descroll</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .sidebar-link {
+            transition: all 0.2s ease;
+        }
+        .sidebar-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .sidebar-link.active {
+            background: rgba(59, 130, 246, 0.2);
+            border-left: 3px solid #3b82f6;
+        }
+        .module-item {
+            transition: all 0.2s ease;
+        }
+        .module-item:hover {
+            background: rgb(248, 250, 252);
+        }
+        .module-item.active {
+            background: rgb(239, 246, 255);
+            border-left: 3px solid #3b82f6;
+        }
+        .progress-ring {
+            transition: stroke-dashoffset 0.3s ease;
+        }
+    </style>
+    <base target="_blank">
+</head>
+<body class="bg-slate-900 text-white antialiased overflow-x-hidden">
+
+    <!-- Top Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-xl border-b border-slate-700">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">D</span>
+                    </div>
+                    <span class="text-lg font-bold text-white">Descroll</span>
+                    <span class="text-slate-500">|</span>
+                    <span class="text-sm text-slate-300">Classroom</span>
+                </div>
+
+                <!-- Center - Course Name -->
+                <div class="hidden md:block text-center">
+                    <h1 class="text-sm font-semibold text-white">Strategic Leadership in FMCG</h1>
+                    <p class="text-xs text-slate-400">Module 3: Brand Portfolio Strategy</p>
+                </div>
+
+                <!-- Right - User Menu -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-slate-400 hover:text-white transition-colors relative">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full object-cover">
+                        <span class="hidden md:block text-sm text-slate-300">James Wilson</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="pt-16 flex h-screen">
+        <!-- Left Sidebar - Course Modules -->
+        <aside class="w-64 bg-slate-800 border-r border-slate-700 overflow-y-auto hidden lg:block">
+            <div class="p-6">
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Progress</span>
+                        <span class="text-xs text-blue-400 font-medium">42%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 42%"></div>
+                    </div>
+                </div>
+
+                <nav class="space-y-1">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Course Modules</p>
+                    
+                    <a href="#" class="module-item active block px-4 py-3 rounded-lg text-sm">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-medium text-white">Module 1: Introduction</span>
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                        <p class="text-xs text-slate-400">3 lessons • 45 min</p>
+                    </a>
+
+                    <a href="#" class="module-item block px-4 py-3 rounded-lg text-sm">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-medium text-slate-300">Module 2: Supply Chain</span>
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                        <p class="text-xs text-slate-400">5 lessons • 1.5 hrs</p>
+                    </a>
+
+                    <a href="#" class="module-item block px-4 py-3 rounded-lg text-sm">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-medium text-blue-400">Module 3: Brand Strategy</span>
+                            <i data-lucide="play-circle" class="w-4 h-4 text-blue-400"></i>
+                        </div>
+                        <p class="text-xs text-slate-400">4 lessons • 1.2 hrs</p>
+                    </a>
+
+                    <a href="#" class="module-item block px-4 py-3 rounded-lg text-sm">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-medium text-slate-300">Module 4: Stakeholder Mgmt</span>
+                            <i data-lucide="lock" class="w-4 h-4 text-slate-500"></i>
+                        </div>
+                        <p class="text-xs text-slate-400">6 lessons • 2 hrs</p>
+                    </a>
+
+                    <a href="#" class="module-item block px-4 py-3 rounded-lg text-sm">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-medium text-slate-300">Module 5: Global Markets</span>
+                            <i data-lucide="lock" class="w-4 h-4 text-slate-500"></i>
+                        </div>
+                        <p class="text-xs text-slate-400">5 lessons • 1.8 hrs</p>
+                    </a>
+
+                    <a href="#" class="module-item block px-4 py-3 rounded-lg text-sm">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-medium text-slate-300">Module 6: Final Project</span>
+                            <i data-lucide="lock" class="w-4 h-4 text-slate-500"></i>
+                        </div>
+                        <p class="text-xs text-slate-400">1 project • 4 weeks</p>
+                    </a>
+                </nav>
+
+                <div class="mt-8 pt-6 border-t border-slate-700">
+                    <nav class="space-y-2">
+                        <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-2 rounded-lg text-sm text-slate-300">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                            Discussions
+                        </a>
+                        <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-2 rounded-lg text-sm text-slate-300">
+                            <i data-lucide="folder" class="w-4 h-4"></i>
+                            Resources
+                        </a>
+                        <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-2 rounded-lg text-sm text-slate-300">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            Schedule
+                        </a>
+                        <a href="#" class="sidebar-link flex items-center gap-3 px-4 py-2 rounded-lg text-sm text-slate-300">
+                            <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                            My Progress
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-y-auto bg-slate-900">
+            <div class="max-w-6xl mx-auto p-6 lg:p-8">
+                <!-- Video Player -->
+                <div class="relative bg-slate-800 rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                    <div class="aspect-video bg-slate-700 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-blue-500/30 transition-colors">
+                                <i data-lucide="play" class="w-10 h-10 text-blue-400"></i>
+                            </div>
+                            <p class="text-slate-400">Lesson 3.2: Portfolio Rationalization Framework</p>
+                            <p class="text-xs text-slate-500 mt-2">45:30 / 1:15:00</p>
+                        </div>
+                    </div>
+                    <!-- Video Controls -->
+                    <div class="px-6 py-4 bg-slate-800 border-t border-slate-700">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <button class="text-slate-300 hover:text-white transition-colors">
+                                    <i data-lucide="skip-back" class="w-5 h-5"></i>
+                                </button>
+                                <button class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <i data-lucide="pause" class="w-5 h-5"></i>
+                                </button>
+                                <button class="text-slate-300 hover:text-white transition-colors">
+                                    <i data-lucide="skip-forward" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-xs text-slate-400">1x</span>
+                                <button class="text-slate-300 hover:text-white transition-colors">
+                                    <i data-lucide="volume-2" class="w-5 h-5"></i>
+                                </button>
+                                <button class="text-slate-300 hover:text-white transition-colors">
+                                    <i data-lucide="maximize" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson Navigation -->
+                <div class="flex items-center justify-between mb-8">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-slate-800 rounded-lg text-sm text-slate-300 hover:bg-slate-700 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        Previous: Brand Architecture
+                    </button>
+                    <span class="text-sm text-slate-400">Lesson 3.2 of 4</span>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-blue-500 rounded-lg text-sm text-white hover:bg-blue-600 transition-colors">
+                        Next: Case Study
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Lesson Content -->
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Lesson Description -->
+                        <div class="bg-slate-800 rounded-2xl p-6">
+                            <h2 class="text-2xl font-bold text-white mb-4">Portfolio Rationalization Framework</h2>
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                Learn how to evaluate your brand portfolio using the BCG matrix adapted for FMCG, 
+                                identify underperforming SKUs, and develop a rationalization strategy that maximizes 
+                                margin while protecting market share.
+                            </p>
+                            <div class="flex flex-wrap gap-4 text-sm">
+                                <div class="flex items-center gap-2 text-slate-400">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                    <span>1:15:00 duration</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-400">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                                    <span>12 page PDF workbook</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-400">
+                                    <i data-lucide="users" class="w-4 h-4"></i>
+                                    <span>Discussion: 23 comments</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resources -->
+                        <div class="bg-slate-800 rounded-2xl p-6">
+                            <h3 class="text-lg font-bold text-white mb-4">Lesson Resources</h3>
+                            <div class="space-y-3">
+                                <a href="#" class="flex items-center gap-4 p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
+                                    <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-red-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-white">Portfolio_Rationalization_Workbook.pdf</p>
+                                        <p class="text-xs text-slate-400">12 pages • 2.4 MB</p>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-slate-400"></i>
+                                </a>
+                                <a href="#" class="flex items-center gap-4 p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
+                                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-blue-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-white">FMCG_Portfolio_Case_Study.xlsx</p>
+                                        <p class="text-xs text-slate-400">Excel template • 1.8 MB</p>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-slate-400"></i>
+                                </a>
+                                <a href="#" class="flex items-center gap-4 p-4 bg-slate-700/50 rounded-xl hover:bg-slate-700 transition-colors">
+                                    <div class="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="link" class="w-5 h-5 text-emerald-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium text-white">Additional Reading: Brand Strategy in FMCG</p>
+                                        <p class="text-xs text-slate-400">External article • Harvard Business Review</p>
+                                    </div>
+                                    <i data-lucide="external-link" class="w-4 h-4 text-slate-400"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Discussion -->
+                        <div class="bg-slate-800 rounded-2xl p-6">
+                            <h3 class="text-lg font-bold text-white mb-4">Discussion</h3>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                                    <div class="flex-1">
+                                        <div class="bg-slate-700/50 rounded-xl p-4">
+                                            <div class="flex items-center gap-2 mb-2">
+                                                <span class="text-sm font-medium text-white">Sarah Chen</span>
+                                                <span class="text-xs text-slate-500">2 hours ago</span>
+                                            </div>
+                                            <p class="text-sm text-slate-300">
+                                                Great framework! We applied this to our snack division and identified 12 SKUs for elimination. Projected margin improvement of 3.2%.
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center gap-4 mt-2 ml-4">
+                                            <button class="text-xs text-slate-400 hover:text-blue-400 transition-colors">Reply</button>
+                                            <button class="text-xs text-slate-400 hover:text-blue-400 transition-colors">Like (5)</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                                    <div class="flex-1">
+                                        <div class="bg-slate-700/50 rounded-xl p-4">
+                                            <div class="flex items-center gap-2 mb-2">
+                                                <span class="text-sm font-medium text-white">Marcus Thompson</span>
+                                                <span class="text-xs text-slate-500">1 hour ago</span>
+                                            </div>
+                                            <p class="text-sm text-slate-300">
+                                                Question on the BCG matrix adaptation: How do we account for seasonal products that appear as "dogs" but drive traffic during peak periods?
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center gap-4 mt-2 ml-4">
+                                            <button class="text-xs text-slate-400 hover:text-blue-400 transition-colors">Reply</button>
+                                            <button class="text-xs text-slate-400 hover:text-blue-400 transition-colors">Like (2)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add Comment -->
+                            <div class="mt-6 flex gap-4">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                                <div class="flex-1">
+                                    <textarea rows="3" placeholder="Add to the discussion..." class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-sm text-white placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none"></textarea>
+                                    <button class="mt-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition-colors">Post Comment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar - Instructor & Upcoming -->
+                    <div class="space-y-6">
+                        <!-- Instructor -->
+                        <div class="bg-slate-800 rounded-2xl p-6">
+                            <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Instructor</h3>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop" class="w-16 h-16 rounded-full object-cover">
+                                <div>
+                                    <p class="font-bold text-white">Dr. Elena Vasquez</p>
+                                    <p class="text-xs text-slate-400">Former CMO, Unilever</p>
+                                </div>
+                            </div>
+                            <button class="w-full px-4 py-2 bg-slate-700 text-sm text-white rounded-lg hover:bg-slate-600 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="message-square" class="w-4 h-4"></i>
+                                Message Instructor
+                            </button>
+                        </div>
+
+                        <!-- Upcoming Deadlines -->
+                        <div class="bg-slate-800 rounded-2xl p-6">
+                            <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Upcoming</h3>
+                            <div class="space-y-4">
+                                <div class="flex gap-3">
+                                    <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="alert-circle" class="w-5 h-5 text-amber-400"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-white">Module 3 Quiz</p>
+                                        <p class="text-xs text-slate-400">Due: Oct 15, 2026</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-blue-400"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-white">Case Study Submission</p>
+                                        <p class="text-xs text-slate-400">Due: Oct 22, 2026</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cohort Members -->
+                        <div class="bg-slate-800 rounded-2xl p-6">
+                            <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Cohort (25)</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full object-cover border-2 border-slate-700" title="Sarah Chen">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full object-cover border-2 border-slate-700" title="Marcus Thompson">
+                                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full object-cover border-2 border-slate-700" title="Amara Okafor">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full object-cover border-2 border-slate-700" title="David Chen">
+                                <div class="w-8 h-8 rounded-full bg-slate-700 border-2 border-slate-700 flex items-center justify-center">
+                                    <span class="text-xs font-medium text-slate-400">+21</span>
+                                </div>
+                            </div>
+                            <button class="w-full px-4 py-2 bg-slate-700 text-sm text-white rounded-lg hover:bg-slate-600 transition-colors">
+                                View All Members
+                            </button>
+                        </div>
+
+                        <!-- Completion Certificate -->
+                        <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-6 border border-blue-500/30">
+                            <i data-lucide="award" class="w-8 h-8 text-blue-400 mb-4"></i>
+                            <h3 class="text-lg font-bold text-white mb-2">Earn Your Certificate</h3>
+                            <p class="text-sm text-slate-300 mb-4">Complete all modules and pass the final project to receive your board-recognized certification.</p>
+                            <div class="flex items-center gap-2 text-sm text-blue-400">
+                                <span>42% completed</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses — Descroll Limited Executive FMCG Training</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .course-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+    <base target="_blank">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-slate-200/50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-xl">D</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-slate-900 tracking-tight">Descroll</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-medium">Limited</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Home</a>
+                    <a href="courses.html" class="text-sm font-medium text-slate-900 font-semibold">Courses</a>
+                    <a href="index.html#about" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">About Us</a>
+                    <a href="index.html#contact" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Contact Us</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="login.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Login</a>
+                    <button class="btn-primary bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-slate-900/20">
+                        Enquire Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block text-sm font-medium text-slate-600 py-2">Home</a>
+                <a href="courses.html" class="block text-sm font-medium text-slate-900 py-2 font-semibold">Courses</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 py-2">About Us</a>
+                <a href="index.html#contact" class="block text-sm font-medium text-slate-600 py-2">Contact Us</a>
+                <a href="login.html" class="block text-sm font-medium text-slate-600 py-2">Login</a>
+                <button class="w-full bg-slate-900 text-white px-6 py-3 rounded-full text-sm font-medium mt-4">Enquire Now</button>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-slate-900">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80" alt="Executive education" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/70"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-sm mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-xs font-medium text-slate-300 uppercase tracking-wider">10 Executive Programs</span>
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+                Executive <br>
+                <span class="font-serif italic text-slate-300">Courses</span>
+            </h1>
+            <p class="text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto">
+                Comprehensive executive education programs designed for senior FMCG leaders. Each course is crafted by industry veterans to deliver measurable business impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-4 block">All Programs</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                    Transform Your <br>
+                    <span class="font-serif italic text-slate-500">Leadership Journey</span>
+                </h2>
+                <p class="text-lg text-slate-600">Choose from our comprehensive suite of executive programs tailored for FMCG professionals at every stage.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Strategic Leadership" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">8 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="users" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Cohort-based</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Strategic Leadership in FMCG</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Master the complexities of global supply chains, brand portfolio management, and stakeholder alignment at the C-suite level.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+3</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£4,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Digital Transformation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-xs font-semibold rounded-full">12 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="zap" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Intensive</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">Digital Transformation & E-Commerce</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Navigate the digital shelf, DTC strategies, and omnichannel excellence. Built with insights from Amazon, Tesco, and Alibaba veterans.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+5</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£6,200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Data Analytics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-purple-500 text-white text-xs font-semibold rounded-full">6 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="bar-chart-3" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Self-paced</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">Commercial Analytics & Forecasting</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Leverage AI-driven demand sensing, predictive analytics, and scenario planning to outpace market volatility.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+2</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£3,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" alt="Supply Chain" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-amber-500 text-white text-xs font-semibold rounded-full">10 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="truck" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Comprehensive</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">Supply Chain Excellence</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">End-to-end supply chain optimization, sustainability transformation, and resilience planning for global FMCG operations.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+4</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£5,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=800&q=80" alt="Brand Management" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-rose-500 text-white text-xs font-semibold rounded-full">8 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="palette" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Strategic</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colors">Brand Portfolio Management</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Master brand architecture, portfolio rationalization, and lifecycle management for multi-brand FMCG organizations.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+3</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£4,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80" alt="Pricing Strategy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-cyan-500 text-white text-xs font-semibold rounded-full">6 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="calculator" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Analytical</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Pricing Strategy & Revenue Management</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Advanced pricing models, promotional effectiveness, and revenue optimization strategies for competitive markets.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+2</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£3,900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 7 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80" alt="Innovation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">10 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="lightbulb" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Creative</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-green-600 transition-colors">Innovation & New Product Development</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Stage-gate processes, consumer co-creation, and agile NPD methodologies that reduce time-to-market.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+4</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£5,200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 8 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Sustainability" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-emerald-600 text-white text-xs font-semibold rounded-full">8 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="leaf" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Impact-focused</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors">Sustainability in FMCG</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Circular economy principles, sustainable packaging, carbon neutrality roadmaps, and ESG reporting excellence.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+3</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£4,600</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 9 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80" alt="Marketing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">8 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="megaphone" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Dynamic</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">Omnichannel Marketing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Integrated marketing communications, shopper marketing, and seamless customer journeys across physical and digital touchpoints.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+3</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£4,700</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 10 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="M&A" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-violet-500 text-white text-xs font-semibold rounded-full">12 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="building-2" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Advanced</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">M&A in Consumer Goods</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Due diligence frameworks, integration strategies, and cultural alignment for successful FMCG mergers and acquisitions.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+3</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£6,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 11 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="International Markets" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-sky-500 text-white text-xs font-semibold rounded-full">10 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="globe" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Global</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-sky-600 transition-colors">International Market Entry & Expansion</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Strategic frameworks for entering emerging markets, localization strategies, and navigating regulatory landscapes across borders.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+5</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£5,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 12 -->
+                <div class="course-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Finance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="px-3 py-1 bg-indigo-500 text-white text-xs font-semibold rounded-full">8 Weeks</span>
+                        </div>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="landmark" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500 font-medium">Financial</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">FMCG Finance & P&L Management</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Master P&L ownership, margin optimization, capex planning, and financial leadership for FMCG business unit heads.</p>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40&h=40&fit=crop" class="w-8 h-8 rounded-full border-2 border-white" alt="Instructor">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-medium text-slate-600">+3</div>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-900">£5,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-slate-600 mb-6">Can't find what you're looking for? We also offer custom enterprise programs.</p>
+                <button class="btn-primary bg-slate-900 text-white px-10 py-4 rounded-full font-semibold hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20 inline-flex items-center gap-2">
+                    Contact for Custom Programs <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Testimonials Section -->
+    <section class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-4 block">Testimonials</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                    What Our Alumni <br>
+                    <span class="font-serif italic text-slate-500">Are Saying</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50">
+                    <i data-lucide="quote" class="w-8 h-8 text-slate-300 mb-4"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6">"The Strategic Leadership program completely transformed my approach. Within 6 months, I was promoted to VP of Operations."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="James Wilson">
+                        <div>
+                            <div class="font-bold text-slate-900">James Wilson</div>
+                            <div class="text-sm text-slate-500">VP Operations, Unilever • Strategic Leadership</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50">
+                    <i data-lucide="quote" class="w-8 h-8 text-slate-300 mb-4"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6">"Digital Transformation course gave us the roadmap to increase our e-commerce revenue by 150% in one year."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Sarah Chen">
+                        <div>
+                            <div class="font-bold text-slate-900">Sarah Chen</div>
+                            <div class="text-sm text-slate-500">CMO, PepsiCo • Digital Transformation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50">
+                    <i data-lucide="quote" class="w-8 h-8 text-slate-300 mb-4"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6">"The analytics frameworks I learned helped us reduce forecasting errors by 35%. ROI was evident within one quarter."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Amara Okafor">
+                        <div>
+                            <div class="font-bold text-slate-900">Amara Okafor</div>
+                            <div class="text-sm text-slate-500">Director, Nestlé • Commercial Analytics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Recognition Section -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <span class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4 block">Recognized By</span>
+                <h2 class="text-4xl font-bold mb-6">Industry Partners & Certifications</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Our programs are endorsed by leading FMCG organizations and accredited by global educational bodies.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white mb-2">FMCG</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wider">Leadership Council</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white mb-2">FTSE</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wider">100 Recognized</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white mb-2">CIPS</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wider">Accredited</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white mb-2">CMI</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-wider">Chartered Institute</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-4 block">FAQ</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                    Frequently Asked <br>
+                    <span class="font-serif italic text-slate-500">Questions</span>
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-semibold text-slate-900">What are the prerequisites for enrollment?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-8 pb-6">
+                        <p class="text-slate-600">Most programs require 5+ years of FMCG experience. C-suite programs require 10+ years. No formal academic prerequisites, but we assess professional experience during the application process.</p>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-semibold text-slate-900">How are the courses delivered?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-8 pb-6">
+                        <p class="text-slate-600">Courses are delivered through a blend of live virtual sessions, self-paced modules, and in-person residencies (optional). Each cohort has 25 senior executives from non-competing markets for optimal peer learning.</p>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-semibold text-slate-900">Is there a certification upon completion?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-8 pb-6">
+                        <p class="text-slate-600">Yes, all programs award a Board-Recognised Certification endorsed by the FMCG Leadership Council. Credits are transferable toward executive education requirements at partner institutions.</p>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-semibold text-slate-900">Can my company sponsor multiple employees?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-8 pb-6">
+                        <p class="text-slate-600">Absolutely! We offer enterprise packages with volume discounts for 5+ enrollments. Custom cohort programs can also be arranged exclusively for your organization's leadership team.</p>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        <span class="font-semibold text-slate-900">What is the refund policy?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-8 pb-6">
+                        <p class="text-slate-600">Full refund available up to 30 days before the program start date. 50% refund within 30 days. After the program begins, no refunds are issued, but you may defer to a future cohort within 12 months.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talk to an Advisor Section -->
+    <section class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+            <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-6 block">Get Expert Guidance</span>
+            <h2 class="text-4xl lg:text-6xl font-bold text-slate-900 leading-tight mb-8">
+                Talk to an <br>
+                <span class="font-serif italic text-slate-500">Advisor</span>
+            </h2>
+            <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
+                Not sure which program is right for you? Schedule a free 30-minute consultation with our academic advisors.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <i data-lucide="calendar" class="w-8 h-8 text-blue-600 mb-4"></i>
+                    <h4 class="font-bold text-slate-900 mb-2">Book a Call</h4>
+                    <p class="text-sm text-slate-600">Choose a time that works for you from our advisor's calendar</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <i data-lucide="user-check" class="w-8 h-8 text-emerald-600 mb-4"></i>
+                    <h4 class="font-bold text-slate-900 mb-2">1-on-1 Consultation</h4>
+                    <p class="text-sm text-slate-600">Personalized guidance on program selection and career path</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <i data-lucide="file-text" class="w-8 h-8 text-purple-600 mb-4"></i>
+                    <h4 class="font-bold text-slate-900 mb-2">Get a Custom Plan</h4>
+                    <p class="text-sm text-slate-600">Receive a tailored learning roadmap for your goals</p>
+                </div>
+            </div>
+
+            <button class="btn-primary bg-slate-900 text-white px-10 py-5 rounded-full font-semibold hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20 text-lg inline-flex items-center gap-2">
+                Schedule Free Consultation <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">D</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xl font-bold text-white tracking-tight">Descroll</span>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-medium">Limited</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 max-w-sm">
+                        Premier executive education for FMCG leaders. Forging the next generation of consumer goods executives through rigorous, industry-led programmes.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Programs</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="courses.html" class="hover:text-white transition-colors">All Courses</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Strategic Leadership</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Transformation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Commercial Analytics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Custom Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#faculty" class="hover:text-white transition-colors">Faculty</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Press</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">© 2026 Descroll Limited. All rights reserved.</p>
+                <p class="text-sm">Registered in England & Wales • Company No. 12345678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

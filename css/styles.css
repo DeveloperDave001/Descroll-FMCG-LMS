@@ -1,0 +1,61 @@
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Playfair Display', serif; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Gradient text */
+.text-gradient {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card hover effects */
+.course-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button shine effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+/* Navigation blur */
+.nav-blur {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Stats counter animation */
+.stat-number {
+    font-variant-numeric: tabular-nums;
+}
